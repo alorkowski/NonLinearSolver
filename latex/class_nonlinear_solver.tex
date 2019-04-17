@@ -1,0 +1,124 @@
+\hypertarget{class_nonlinear_solver}{}\section{Nonlinear\+Solver Class Reference}
+\label{class_nonlinear_solver}\index{Nonlinear\+Solver@{Nonlinear\+Solver}}
+
+
+\hyperlink{_nonlinear_solver_8hpp_source}{Nonlinear\+Solver.\+hpp}.  
+
+
+
+
+{\ttfamily \#include $<$Nonlinear\+Solver.\+hpp$>$}
+
+Inheritance diagram for Nonlinear\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nonlinear_solver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_nonlinear_solver_af47ece967a93e6cfaf5b46bff22f6279}{Nonlinear\+Solver} (\hyperlink{class_expression}{Expression} \&equation, double initial, double tolerance, int max\+Iter, bool verbosity)
+\item 
+virtual \hyperlink{class_nonlinear_solver_ad29eabca357434c5e40764a80ee8482f}{$\sim$\+Nonlinear\+Solver} ()\hypertarget{class_nonlinear_solver_ad29eabca357434c5e40764a80ee8482f}{}\label{class_nonlinear_solver_ad29eabca357434c5e40764a80ee8482f}
+
+\begin{DoxyCompactList}\small\item\em A virtual destructor for the family of nonlinear solvers. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_nonlinear_solver_a72180277586bd7ec915cc4a806f62bb9}{solve} ()=0\hypertarget{class_nonlinear_solver_a72180277586bd7ec915cc4a806f62bb9}{}\label{class_nonlinear_solver_a72180277586bd7ec915cc4a806f62bb9}
+
+\begin{DoxyCompactList}\small\item\em A pure virtual solver method for the family of nonlinear solvers. \end{DoxyCompactList}\item 
+void \hyperlink{class_nonlinear_solver_ac27b68fb52e995ee5204b255460a3e13}{print\+Verbose} (int i, double \&x)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_expression}{Expression} \hyperlink{class_nonlinear_solver_aad588fc96d07cf310a13ae11b51ce550}{eq}\hypertarget{class_nonlinear_solver_aad588fc96d07cf310a13ae11b51ce550}{}\label{class_nonlinear_solver_aad588fc96d07cf310a13ae11b51ce550}
+
+\begin{DoxyCompactList}\small\item\em An object of the \hyperlink{class_expression}{Expression} class holding the strings representing mathematical expressions. \end{DoxyCompactList}\item 
+double \hyperlink{class_nonlinear_solver_a0af503b5f79fd74a61b1ba8c956e9a06}{x0}\hypertarget{class_nonlinear_solver_a0af503b5f79fd74a61b1ba8c956e9a06}{}\label{class_nonlinear_solver_a0af503b5f79fd74a61b1ba8c956e9a06}
+
+\begin{DoxyCompactList}\small\item\em A doubles representing the initial guess of the solution to the equation. \end{DoxyCompactList}\item 
+double \hyperlink{class_nonlinear_solver_a8fa50d85cb58f69da6cddf52a2b950af}{tol}\hypertarget{class_nonlinear_solver_a8fa50d85cb58f69da6cddf52a2b950af}{}\label{class_nonlinear_solver_a8fa50d85cb58f69da6cddf52a2b950af}
+
+\begin{DoxyCompactList}\small\item\em The tolerance value. The method stops once the residual errors fall below this value. \end{DoxyCompactList}\item 
+int \hyperlink{class_nonlinear_solver_accd5129e5d683f9d8187bd9d4d13b023}{n\+Max}\hypertarget{class_nonlinear_solver_accd5129e5d683f9d8187bd9d4d13b023}{}\label{class_nonlinear_solver_accd5129e5d683f9d8187bd9d4d13b023}
+
+\begin{DoxyCompactList}\small\item\em The maximum number of iterations. The method stops once this number is reached. \end{DoxyCompactList}\item 
+bool \hyperlink{class_nonlinear_solver_a81db23a90d44eeea9b9ec57d8ea94155}{verbose}\hypertarget{class_nonlinear_solver_a81db23a90d44eeea9b9ec57d8ea94155}{}\label{class_nonlinear_solver_a81db23a90d44eeea9b9ec57d8ea94155}
+
+\begin{DoxyCompactList}\small\item\em Set to true to print all intermediate and final results onto the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_nonlinear_solver_8hpp_source}{Nonlinear\+Solver.\+hpp}. 
+
+An abstract class for the family of nonlinear solvers. \begin{DoxyAuthor}{Author}
+Jaquier, Michael \href{mailto:michael.jaquier@epfl.ch}{\tt michael.\+jaquier@epfl.\+ch} 
+
+Lorkowski, Alexander \href{mailto:alexander.lorkowski@epfl.ch}{\tt alexander.\+lorkowski@epfl.\+ch} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10 December 2016 
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+Ecole Polytechnic Federal de Lausanne (E\+P\+FL) 
+
+M\+A\+T\+H-\/458 Programming Concepts in Scientific Computing 
+\end{DoxyRemark}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Nonlinear\+Solver@{Nonlinear\+Solver}!Nonlinear\+Solver@{Nonlinear\+Solver}}
+\index{Nonlinear\+Solver@{Nonlinear\+Solver}!Nonlinear\+Solver@{Nonlinear\+Solver}}
+\subsubsection[{\texorpdfstring{Nonlinear\+Solver(\+Expression \&equation, double initial, double tolerance, int max\+Iter, bool verbosity)}{NonlinearSolver(Expression &equation, double initial, double tolerance, int maxIter, bool verbosity)}}]{\setlength{\rightskip}{0pt plus 5cm}Nonlinear\+Solver\+::\+Nonlinear\+Solver (
+\begin{DoxyParamCaption}
+\item[{{\bf Expression} \&}]{equation, }
+\item[{double}]{initial, }
+\item[{double}]{tolerance, }
+\item[{int}]{max\+Iter, }
+\item[{bool}]{verbosity}
+\end{DoxyParamCaption}
+)}\hypertarget{class_nonlinear_solver_af47ece967a93e6cfaf5b46bff22f6279}{}\label{class_nonlinear_solver_af47ece967a93e6cfaf5b46bff22f6279}
+A contructor to instantiate common variables to the family of nonlinear solvers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em equation} & An object of the \hyperlink{class_expression}{Expression} class that contains the mathematical expression for the class to evaluate. \\
+\hline
+{\em initial} & The initial guess of the solution to the equation. \\
+\hline
+{\em tolerance} & The tolerance value. The method stops once the residual errors fall below this value. \\
+\hline
+{\em max\+Iter} & The maximum number of iterations. The method stops once this number is reached. \\
+\hline
+{\em verbosity} & Set to true to print all intermediate and final results onto the console. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Nonlinear\+Solver@{Nonlinear\+Solver}!print\+Verbose@{print\+Verbose}}
+\index{print\+Verbose@{print\+Verbose}!Nonlinear\+Solver@{Nonlinear\+Solver}}
+\subsubsection[{\texorpdfstring{print\+Verbose(int i, double \&x)}{printVerbose(int i, double &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nonlinear\+Solver\+::print\+Verbose (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{double \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{class_nonlinear_solver_ac27b68fb52e995ee5204b255460a3e13}{}\label{class_nonlinear_solver_ac27b68fb52e995ee5204b255460a3e13}
+A function that takes a constant integer and a vector argument and prints to the console.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The current index or iteration to print out to the console. \\
+\hline
+{\em x} & The current solution of the nonlinear problem. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/Nonlinear\+Solver.\+hpp\item 
+code/Nonlinear\+Solver.\+cpp\end{DoxyCompactItemize}
